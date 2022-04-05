@@ -2,7 +2,6 @@
 from cgitb import text
 from email.mime import image
 
-
 def user_choice():
 
     valid = False
@@ -10,6 +9,7 @@ def user_choice():
 
         response = input("File type (integer / text / image): "). lower()
 
+        text_ok = ["text","t","txt"]
         if response == "text" or response == "t":
             return "text"
 
