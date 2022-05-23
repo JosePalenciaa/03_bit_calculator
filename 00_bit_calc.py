@@ -1,9 +1,6 @@
 # Functions go here
 
 # Puts series of symbols at start and end of text (for emphasis)
-from email.mime import image
-
-
 def statement_generator(text, decoration):
 
     #Makes string with five characters
@@ -17,7 +14,6 @@ def statement_generator(text, decoration):
     print()
 
     return ""
-
 
 # displays intructions / information 
 def instructions():
@@ -39,7 +35,7 @@ def user_choice():
     # Responses
     text_ok = ["text","t","txt"]
     integer_ok = ["int","integer","number", "#"]
-    image_ok = ["image","img","picture", "pix", "pic", "p"]
+    image_ok = ["image","img","picture", "pix", "pic", "p", "I"]
 
     valid = False
     while not valid:
@@ -75,8 +71,7 @@ def num_check(question, low):
     valid = False
     while not valid:
         
-        error = "Please enter a number that is more than "
-        "(or equal to) {}".format(low)
+        error = "Please enter a number that is more than zero" "(or equal to) {}".format(low)
         print()
         
         try:
@@ -107,11 +102,11 @@ def text_bits():
     var_length = len(var_text)
     num_bits = 8 * var_length
 
-    # Outputs answer with workingtt
+    # Outputs answer with working
     print()
     print("\'{}\' has {} characters ...". format(var_text, var_length))
     print("# of bits is {} x 8...".format(var_length))
-    print("We need {} bits to represent \'{}\'".format(num_bits, var_text))
+    print("We need {} bits to represent {}".format(num_bits, var_text))
     print()
 
     return ""
@@ -150,7 +145,7 @@ def int_bits():
     var_binary = "{0:b}".format(var_integer)
 
     # calculate # of bits (length of string above)
-    num_bits = len(var_integer)
+    num_bits = len(var_binary)
 
     # output answer with working
     print()
@@ -166,7 +161,7 @@ def int_bits():
 statement_generator("Bit Calculator for Integers, Text & Images", "-")  
 
 # Display instructions if user has not used the program before
-first_time = input("Press <enter> to see the instructions or any key to continue.")
+first_time = input("Press <enter> to see the instructions or any key to continue:")
 
 if first_time == "":
     instructions()
@@ -190,6 +185,8 @@ while keep_going == "":
 
     # For text, ask for string
     else:
-        text_bits
+        text_bits()
 
+    print()
+    keep_going = input("Press <enter> to continue or any key to quit: ")
     print()
