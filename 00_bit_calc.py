@@ -71,7 +71,7 @@ def num_check(question, low):
     valid = False
     while not valid:
         
-        error = "Please enter a number that is more than zero" "(or equal to) {}".format(low)
+        error = "Please enter a number that is more than zero " "(or equal to) {}".format(low)
         print()
         
         try:
@@ -106,7 +106,7 @@ def text_bits():
     print()
     print("\'{}\' has {} characters ...". format(var_text, var_length))
     print("# of bits is {} x 8...".format(var_length))
-    print("We need {} bits to represent {}".format(num_bits, var_text))
+    print("We need {} bits to represent \'{}\'".format(num_bits, var_text))
     print()
 
     return ""
@@ -137,7 +137,7 @@ def image_bits():
 def int_bits():
 
     # gets integer (must be >=0)
-    var_integer = num_check("Please eneter an integer: ", 0)
+    var_integer = num_check("Please enter an integer: ", 0)
 
     # source for code below is
     # https://stackoverflow.com/questions/8928240/convert-base-2-binary-number-string-to-int
@@ -190,3 +190,5 @@ while keep_going == "":
     print()
     keep_going = input("Press <enter> to continue or any key to quit: ")
     print()
+
+    
